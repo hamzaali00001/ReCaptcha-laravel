@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@store')->name('contact');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
